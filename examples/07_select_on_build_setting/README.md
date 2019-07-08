@@ -1,4 +1,4 @@
-# Example 08: Select on build settings
+# Example 07: Select on build settings
 
 Like examples 03 (select on constraint) and 04 (select on platform), this
 example demonstrates how to affect a build target via configuration. 
@@ -6,7 +6,7 @@ example demonstrates how to affect a build target via configuration.
 ## Commands
 
 ```
-bazel build //examples/08_using_build_setting:a
+bazel build //examples/07_select_on_build_setting
 
 >   yolo_library(
 >     name = 'a',
@@ -17,8 +17,8 @@ bazel build //examples/08_using_build_setting:a
 >       'executing_on_os': 'host',
 >     },
 >   )
-
-bazel build //examples/08_using_build_setting:a --//examples/08_using_build_setting:foo_enabled
+#
+bazel build //examples/07_select_on_build_setting:a --//examples/07_select_on_build_setting:foo_enabled
 
 >   yolo_library(
 >     name = 'a',
@@ -39,7 +39,7 @@ bazel build //examples/08_using_build_setting:a --//examples/08_using_build_sett
 >     },
 >   )
 
-bazel build //examples/08_using_build_setting:a --//examples/08_using_build_setting:foo_enabled=0
+bazel build //examples/07_select_on_build_setting:a --//examples/07_select_on_build_setting:foo_enabled=0
 
 >   yolo_library(
 >     name = 'a',
@@ -51,7 +51,7 @@ bazel build //examples/08_using_build_setting:a --//examples/08_using_build_sett
 >     },
 >   )
 
-bazel build //examples/08_using_build_setting:a --//examples/08_using_build_setting:foo_enabled=1
+bazel build //examples/07_select_on_build_setting:a --//examples/07_select_on_build_setting:foo_enabled=1
 
 >   yolo_library(
 >     name = 'a',
