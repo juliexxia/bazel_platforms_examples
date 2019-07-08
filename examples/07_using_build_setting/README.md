@@ -86,5 +86,4 @@ build setting defined in [Skylib's
 common_settings.bzl](https://github.com/bazelbuild/bazel-skylib/blob/master/rules/common_settings.bzl).
 We highly recommend using these standard definitions in your project unless you need something more
 complicated, like [a more complexly-typed build
-setting](https://docs.bazel.build/versions/master/skylark/config.html#using-ctxbuild_setting_value)
-build setting]() 
+setting](https://docs.bazel.build/versions/master/skylark/config.html#using-ctxbuild_setting_value). 
