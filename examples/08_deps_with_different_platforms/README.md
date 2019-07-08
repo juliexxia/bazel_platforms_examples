@@ -26,12 +26,12 @@ dependencies with a different configuration using
 Starlark [transitions](https://docs.bazel.build/versions/0.27.0/skylark/config.html#user-defined-transitions).
 
 While starlark transitions are designed to transition on (build 
-settings)[https://docs.bazel.build/versions/0.27.0/skylark/config.html#user-defined-build-settings]
+settings)[https://docs.bazel.build/versions/0.27.0/skylark/config.html#user-defined-build-settings] 
 (see example 07), this example shows how they can also work on native options.
 
 Since starlark transitions create new configured targets, they have the
 potential to exponentially grow your configured target graph size. They have
-a built in whitelisting mechanism controlled by the mandatory `_whitelist_function_transition'
+a built in whitelisting mechanism controlled by the mandatory `_whitelist_function_transition`
 attribute. If you'd like to control your own whitelist for your project, you can create one
-at the location `//tools/whitelists/function_transition_whitelist' in your project. Otherwise,
+at the location `//tools/whitelists/function_transition_whitelist` in your project. Otherwise,
 you can set the attribute to the all-encompassing list at `@bazel_tools//tools/whitelists/function_transition_whitelist` (as seen in the example).
