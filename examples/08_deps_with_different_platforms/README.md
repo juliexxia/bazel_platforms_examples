@@ -25,8 +25,8 @@ seperate Bazel builds, you can specify building
 dependencies with a different configuration using 
 Starlark [transitions](https://docs.bazel.build/versions/0.27.0/skylark/config.html#user-defined-transitions).
 
-While starlark transitions are designed to transition on (build 
-settings)[https://docs.bazel.build/versions/0.27.0/skylark/config.html#user-defined-build-settings] 
+While starlark transitions are designed to transition on [build 
+settings](https://docs.bazel.build/versions/0.27.0/skylark/config.html#user-defined-build-settings) 
 (see example 07), this example shows how they can also work on native options.
 
 Since starlark transitions create new configured targets, they have the
