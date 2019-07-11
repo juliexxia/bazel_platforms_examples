@@ -7,7 +7,6 @@ example demonstrates how to affect a build target via configuration.
 
 ```
 bazel build //examples/07_select_on_build_setting
-
 >   yolo_library(
 >     name = 'a',
 >     toolchain = {
@@ -17,9 +16,8 @@ bazel build //examples/07_select_on_build_setting
 >       'executing_on_os': 'host',
 >     },
 >   )
-#
-bazel build //examples/07_select_on_build_setting:a --//examples/07_select_on_build_setting:foo_enabled
 
+bazel build //examples/07_select_on_build_setting:a --//examples/07_select_on_build_setting:foo_enabled
 >   yolo_library(
 >     name = 'a',
 >     toolchain = {
