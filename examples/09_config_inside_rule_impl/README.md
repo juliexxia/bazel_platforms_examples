@@ -6,12 +6,12 @@ by depending on build setting targets
 ```
 bazel build //examples/09_config_inside_rule_impl:my_rule 
 > Printing from my_rule
-> foo_enabled = False
+> _foo_enabled = False
 
 bazel build //examples/09_config_inside_rule_impl:my_rule \
 	--//examples/09_config_inside_rule_impl:foo_enabled_flag=True
 > Printing from my_rule
-> foo_enabled = True
+> _foo_enabled = True
 ```
 
 ## Description
@@ -24,3 +24,8 @@ in the build before this rule is analyzed (i.e. on the command line or
 by a [configuration
 transition](https://docs.bazel.build/versions/0.27.0/skylark/config.html#user-defined-transition))
 , the updated value will be read by the rule here.
+
+This example also shows the best practice of reading build settings via
+[private attributes](https://docs.bazel.build/versions/master/skylark/rules.html#private-attributes-and-implicit-dependencies). By picking an attribute
+name beginning with and underscore, the attribute becomes private i.e. users 
+can't override the value.
